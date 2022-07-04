@@ -1,0 +1,9 @@
+FROM golang:1.17.11
+
+WORKDIR /var/go
+
+COPY go .
+
+RUN go mod init viq/viq
+
+CMD [ "go", "run", "." ]
